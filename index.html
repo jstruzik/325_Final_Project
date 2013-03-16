@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+		function register(){
+			$('#sign_in_wrapper').hide();
+			$('#register_wrapper').fadeIn();
+		}
+		
+		window.onload=function(){
+			$('#signIn').on('click',function(event){
+				$('#invalid').fadeIn();
+			});
+		}
+    </script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+	 <a href="index.html">
+    <div class="logo">
+    </div></a>
+    <div class="nav">
+      <div id="login">
+		<form class="boxCont" method="post" action="register.php">
+        <div id="sign_in_wrapper">
+			<div>
+				<label for="email">Email</label>
+				<input id="email" type="text" name="email" placeholder="Please enter your email here" />
+			</div>
+			
+			<div>
+				<label for="password">Password</label>
+				<input id="password" type="password" name="password" placeholder="And your password here" />
+			</div>
+			
+			<div id="invalid" style="display:none;color:red;">You've entered an invalid Email or password. Please try again.</div>
+			
+			<div>
+				<input type="button" id="signIn" name="signIn" value="Sign In" class="btn left" />
+				<input type="button" id="signUp" name="signUp" value="Register" class="btn right" onclick="register();">
+			</div>
+		</div>
+        <div id="register_wrapper" style="display:none;">
+        	Please enter your email to register <br /><br />
+        	<div>
+				<label for="new_email">Email</label>
+				<input id="new_email" type="text" name="new_email" placeholder="Please enter your email here" />
+			</div>
+            <div>
+                <input type="submit" id="signUp" name="signUp" value="Sign Up" class="btn right">
+            </div>
+        </div>
+		</form>
+        </div>
+    </div>
+  </div>
+  <div id="continertopbg">
+    <div id="continerbottombg">
+      <div id="continer" style="height:308px;">
+        <div class="block1">
+          <h1 class="head">Your First Stop For UMass Textbook Supplies</h1>
+          <p>Stop waiting weeks and reaching deep into your wallet for expensive textbooks this semester. Ubooks is a program local to the UMass community where students can borrow/buy or lend/sell textbooks
+          for any of their classes.</p>
+        </div>
+        <div class="block2">
+          <a href="search.php"><img src="images/search.png" style="padding-left:10px;"></img></a>
+          <a href="register.php"><img src="images/sell.png" style="padding-left:10px;"></img></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="summryblock">
+    <div class="innerwrapper">
+      <div class="curlyopen"></div>
+      <div class="summryblock1">
+        <h2>Step One</h2>
+        <p>Sign up for our service and search for the book(s) you're trying to buy,borrow,lend or sell.</p>
+      </div>
+      <div class="summryblock2">
+        <h2>Step Two</h2>
+        <p>Pick up or drop off your selected book at the UBooks center on campus.</p>
+      </div>
+      <div class="summryblock3">
+        <h2>Step Three</h2>
+        <p>Once the semester is over, drop off any borrowed books and collect lent books or money from sold books.</p>
+      </div>
+      <div class="curlyclose"></div>
+    </div>
+  </div>
+  
+</div>
+
+		</div>
+</body>
+</html>
